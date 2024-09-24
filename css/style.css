@@ -1,0 +1,568 @@
+/* GLOBAL STYLE */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  background: var(--text-white);
+}
+
+:root {
+  /* --links-color: #f90;
+  --links-color-2: #e1670e;
+  --link-focus-color: #cc9933;
+  --link-focus2-color: #ffb84d;
+  --link-hover-color: #f0bf5f;
+  --link-active-color: #a47312; */
+  /* --btn-color: #cc9933; */
+  /* --desc-color: #999; */
+  /* --outline-color: #cacaca; */
+  /* --header-text-link: #666; */
+  /* --form-bg: #414141; */
+  --text-color: #121723;
+  --text-white: #fff;
+  --bg-main: #3f2aff;
+  --links-bg: #3f2aff;
+  --advantage-title: #2e2b44;
+  --teachers-bg: #212133;
+  --courses-bg: #edf0f9;
+  --card-desc: #666;
+  --teacher-desc: #85859b;
+
+  --text-color-focus: #cfdbff;
+  --bg-svg: rgb(255, 173, 191);
+  --text-color-hover: rgb(135, 145, 255);
+
+  --links-hover: #2818b7;
+  --links-focus: #1b1082;
+  --links-active: #1427f2;
+
+  --outline-bg: rgb(255, 173, 20);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 0;
+}
+
+svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-white);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Bold"), url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Medium"),
+    url("../fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CUSTOM_CLASSES */
+.flex {
+  display: flex;
+}
+.sections__offset {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.sections__title {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+}
+
+.sections__desc {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.sections__link {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* ------------------------1920px------------------------------ */
+
+/* Header */
+
+.header {
+  background-color: var(--bg-main);
+}
+
+.header__log {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
+
+.header__list {
+  display: flex;
+  gap: 56px;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__link {
+  color: var(--text-white);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  transition: color 0.2s ease-in-out;
+}
+
+.header__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-white);
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.header__link:hover::after {
+  transform: scale(1);
+}
+
+.header__link:hover {
+  color: var(--text-color-hover);
+}
+
+.header__link:active:not(:focus-visible) {
+  color: var(--text-white);
+}
+
+.header__link:focus-visible {
+  outline: 2px solid var(--courses-bg);
+  outline-offset: 4px;
+  transition: outline 0.2s ease-in-out, color 0.2 ease-in-out;
+  color: var(--text-color-focus);
+}
+
+/* Fullscreen */
+
+.fullscreen {
+  background: radial-gradient(
+    44.07% 44.07% at 67.78% 55.93%,
+    #555681 0%,
+    #212133 100%
+  );
+  padding-top: 0;
+}
+
+.fullscrenn__title {
+  color: var(--text-white);
+  margin-bottom: 30px;
+  max-width: 459px;
+  font-size: 60px;
+}
+
+.fullscreen__desc {
+  margin-bottom: 70px;
+  max-width: 444px;
+  color: var(--text-white);
+}
+
+.fullscreen__link {
+  display: inline-flex;
+  border-radius: 20px;
+  background: var(--links-bg);
+  padding: 24px 75px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.fullscreen__link:hover:not(:focus-visible) {
+  background-color: var(--links-hover);
+}
+
+.fullscreen__link:focus:not(:focus-visible) {
+  background-color: var(--links-focus);
+}
+
+.fullscreen__link:focus-visible {
+  transition: background-color 0.2s ease-in-out;
+  outline: 2px solid var(--outline-bg);
+  background-color: var(--links-focus);
+}
+
+.fullscreen__link:active:not(:focus-visible) {
+  background-color: var(--links-active);
+}
+
+.fullscreen__right::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/fullscreen_img.png");
+  width: 100%;
+  min-height: 523px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.fullscreen__content {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+/* Advantage */
+
+.advantage {
+  padding-bottom: 114px;
+}
+
+.advantage_vertical-offset {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.advantage__left-img::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/Vectary.png");
+  background-size: cover;
+  background-position: left center;
+  max-width: 160px;
+  width: 100%;
+  min-height: 142px;
+  background-repeat: no-repeat;
+}
+
+.advantage__title {
+  color: var(--advantage-title);
+  margin-bottom: 9px;
+  max-width: 380px;
+}
+
+.advantage__desc {
+  max-width: 585px;
+  color: var(--card-desc);
+}
+
+.advantages__card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+
+.card__img {
+  display: flex;
+  background-image: url("../img/eye-circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 80px;
+  width: 100%;
+  min-height: 80px;
+}
+
+.img_3 {
+  background-image: url("../img/eye-circle-3.svg");
+}
+
+.img_2 {
+  background-image: url("../img/fingers.svg");
+}
+
+.card__text {
+  max-width: 240px;
+  color: var(--card-desc);
+}
+
+/* Teachers */
+.teachers {
+  background-color: var(--teachers-bg);
+  padding-bottom: 110px;
+}
+
+.teachers__title {
+  margin-bottom: 30px;
+  color: var(--text-white);
+}
+
+.teacher__img {
+  margin-bottom: 25px;
+  border-radius: 25px 25px 0 0;
+}
+.teacher__title {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--text-white);
+}
+
+.teacher__desc {
+  max-width: 254px;
+  color: var(--teacher-desc);
+}
+
+/* Сourses */
+
+.courses {
+  padding-bottom: 89px;
+}
+
+.courses__title {
+  margin-bottom: 32px;
+}
+
+.courses__item:first-child,
+.courses__item:nth-child(2) {
+  margin-bottom: 29px;
+}
+
+.item__content {
+  display: flex;
+  flex-direction: column;
+  padding: 210px 30px 30px 30px;
+  position: relative;
+  background: var(--courses-bg);
+  border-radius: 20px;
+  height: 100%;
+}
+
+.item__title {
+  color: var(--teachers-bg);
+  margin-bottom: 6px;
+}
+
+.item__desc {
+  max-width: 481px;
+  width: 100%;
+  color: var(--card-desc);
+  margin-bottom: 50px;
+}
+
+.item__content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 180px;
+  background-image: url("../img/courses-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.item_img-2::before {
+  background-image: url("../img/courses-3.jpg");
+}
+
+.item_img-3::before {
+  background-image: url("../img/courses-3.jpg");
+}
+
+.item_img-4::before {
+  background-image: url("../img/courses-4.png");
+}
+
+.time-icon {
+  content: " ";
+  position: absolute;
+  background-image: url("../img/courses-1-clock.svg");
+  top: 15px;
+  right: 6px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 25px;
+  background-size: contain;
+  color: var(--text-white);
+}
+
+.item__link {
+  display: inline-flex;
+  border-radius: 20px;
+  background: var(--links-bg);
+  padding: 20px 59px;
+  margin-top: auto;
+  max-width: max-content;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.item__link:hover:not(:focus-visible) {
+  background-color: var(--links-hover);
+}
+
+.item__link:focus:not(:focus-visible) {
+  background-color: var(--links-focus);
+}
+
+.item__link:focus-visible {
+  outline: 2px solid rgb(255, 181, 7);
+  outline-offset: 3px;
+}
+
+.item__link:active:not(:focus-visible) {
+  background-color: var(--links-active);
+}
+
+.courses__item {
+  position: relative;
+}
+
+.item__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 2px solid var(--outline-bg);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.item__link:focus-visible::before {
+  opacity: 1;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #2e2b44;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 28px 0;
+}
+
+.skillbox__footer {
+  display: flex;
+  color: var(--advantage-title);
+  background-color: var(--text-white);
+  font-size: 13px;
+  justify-content: center;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.social__link:hover path {
+  fill: var(--bg-svg);
+}
+
+.social__link:focus-visible {
+  outline: 2px solid var(--text-color-focus);
+  border-radius: 2px;
+  outline-offset: 10 px;
+}
+
+.social__link:focus-visible path {
+  fill: var(--bg-svg);
+}
+
+/* .nav__search > svg:hover rect {
+  fill: var(--links-color);
+  transition: fill 0.3s ease-in-out;
+}
+
+.nav__search > svg:hover:not(:focus-visible) path {
+  stroke: var(--links-color);
+  transition: stroke 0.3s ease-in-out;
+} */

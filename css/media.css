@@ -1,0 +1,302 @@
+/* ------------------------------768px------------------------------- */
+
+@media screen and (max-width: 993px) {
+  /* Fullscren */
+
+  .fullscreen {
+    padding-bottom: 54px;
+  }
+  .fullscrenn__title {
+    font-size: 50px;
+    margin-bottom: 13px;
+  }
+
+  .fullscreen__desc {
+    font-size: 18px;
+    max-width: 345px;
+    margin-bottom: 62px;
+  }
+
+  .fullscreen__link {
+    font-size: 18px;
+  }
+
+  /* Advantage */
+  .advantage {
+    padding-bottom: 111px;
+  }
+
+  .advantage__title {
+    margin-bottom: 8px;
+  }
+
+  .advantages__card {
+    display: block;
+  }
+
+  .card__img {
+    margin-bottom: 6px;
+  }
+
+  .card__text {
+    max-width: 200px;
+  }
+
+  .advantage__left-img::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    max-width: 211px;
+    width: 100%;
+    min-height: 212px;
+    background-size: contain;
+  }
+
+  /* Teachers */
+
+  .teachers {
+    padding-bottom: 88px;
+  }
+
+  .teacher__card:first-child,
+  .teacher__card:nth-child(2) {
+    margin-bottom: 30px;
+  }
+
+  .teacher__img {
+    max-width: 330px;
+    width: 100%;
+    height: 180px;
+    border-radius: 30px 30px 0 0;
+    margin-bottom: 23px;
+  }
+
+  .teacher__desc {
+    max-width: 330px;
+  }
+
+  /* Courses */
+
+  .courses {
+    padding-bottom: 82px;
+  }
+  .item__content {
+    padding: 210px 16px 30px 30px;
+  }
+  .item__desc {
+    margin-bottom: 27px;
+  }
+
+  .item__content::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/courses-1-768.jpg");
+  }
+
+  .item_img-2::before {
+    background-image: url("../img/courses-2-768.jpg");
+  }
+
+  .item_img-3::before {
+    background-image: url("../img/courses-3-768.jpg");
+  }
+
+  .item_img-4::before {
+    background-image: url("../img/courses-4-768.jpg");
+  }
+}
+
+/* Teachers */
+.teacher__card {
+  width: calc((100% - 30px) / 2);
+}
+
+.courses__item {
+  width: calc((100% - 30px) / 2);
+}
+
+/* ------------------------------576px------------------------------- */
+
+@media screen and (max-width: 767px) {
+  /* Header */
+  .header__nav {
+    flex-wrap: wrap;
+  }
+
+  .log__link {
+    margin: 0 auto;
+    margin-bottom: 31px;
+  }
+
+  /* Fullscreen */
+  .fullscreen {
+    padding-bottom: 47px;
+  }
+  .fullscreen__content {
+    padding-top: 77px;
+  }
+  .fullscreen__right {
+    display: none;
+  }
+
+  /* Advantages */
+
+  .advantage {
+    padding-bottom: 91px;
+  }
+
+  .advantage_vertical-offset {
+    margin-bottom: 30px;
+  }
+
+  .advantage__title {
+    margin-bottom: 16px;
+  }
+
+  .advantages__card {
+    width: calc((100% - 30px * 2) / 3);
+    margin-right: 20px;
+  }
+
+  .advantage__left-img::before {
+    background-size: contain;
+    min-height: 130px;
+  }
+
+  .card__text {
+    width: 110%;
+  }
+
+  /* Courses */
+}
+
+/* ------------------------------320px------------------------------- */
+
+@media screen and (max-width: 576px) {
+  /* HEADER */
+  .header__list {
+    width: 100%;
+    overflow-x: auto;
+    justify-content: space-between;
+  }
+
+  .header__link {
+    display: inline-flex;
+    width: max-content;
+    margin-bottom: 0;
+  }
+
+  .log__link {
+    margin-bottom: 15px;
+  }
+
+  /* Fullscreen */
+
+  .fullscreen {
+    padding-bottom: 13px;
+  }
+
+  .fullscreen__content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .fullscrenn__title {
+    font-size: 30px;
+    max-width: 226px;
+    margin: 0;
+  }
+
+  .fullscreen__desc {
+    font-size: 1rem;
+    max-width: 290px;
+    margin-bottom: 33px;
+  }
+
+  .fullscreen__link {
+    /* display: flex;
+    justify-content: center; */
+    font-size: 16px;
+    padding: 20px 53px;
+  }
+
+  /* Advantage */
+
+  .advantage {
+    padding-bottom: 21px;
+  }
+  .advantage__card-wrapper {
+    flex-direction: column;
+  }
+
+  .advantage__left-img {
+    display: none;
+  }
+
+  .advantage__title {
+    font-size: 20px;
+    max-width: 290px;
+    margin-bottom: 15px;
+  }
+  .advantages__card {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .card__img:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .card__text {
+    max-width: 180px;
+  }
+
+  /* Teachers */
+
+  .teachers__title {
+    font-size: 20px;
+  }
+
+  .teachers__row {
+    flex-direction: column;
+  }
+
+  .teacher__card {
+    width: 100%;
+  }
+
+  .teacher__img {
+    margin-bottom: 27px;
+  }
+
+  .teacher__desc {
+    max-width: 290px;
+  }
+
+  /* Courses */
+
+  .courses__title {
+    font-size: 20px;
+  }
+  .courses__list {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .courses__item {
+    width: 100%;
+  }
+
+  .item__desc {
+    max-width: 100%;
+  }
+}
+
+/* Custom media */
+
+/* ✅ Чтобы переместить меню на 320 как в макете, 
+используйте свойство order чтобы поместить его после поиска 
+и для меню пропишите width: 100%: а для родителя 
+flex-wrap: wrap; */
